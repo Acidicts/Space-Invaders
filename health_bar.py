@@ -8,6 +8,8 @@ dis = pygame.surface.Surface((8, 1))
 def draw_bar(win, health, max_health):
     pixels = (health/max_health)/0.125
     pixels = pixels//1
+    if health > 0:
+        pixels = max(1, pixels)
     pygame.draw.rect(win, (255, 0, 0), (0, 0, 8, 2))
     pygame.draw.rect(win, (0, 255, 0), (0, 0, int(pixels), 2))
 
