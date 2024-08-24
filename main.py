@@ -39,6 +39,7 @@ class Enemy(pygame.sprite.Sprite):
         elif self.bullet_cooldown is not None and pygame.time.get_ticks() - self.bullet_cooldown >= 1000:
             self.bullet_cooldown = None
 
+
 class Bullet(pygame.sprite.Sprite):
     def __init__(self, player_x, player_y, shots=0, team="player", image=bullet_img):
         super().__init__()
